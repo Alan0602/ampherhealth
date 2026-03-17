@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+@theme inline {
+  --color-primary: #005d97;
+  --color-secondary: #022452;
+  --color-background-light: #f7f5f8;
+  --color-background-dark: #1b0f23;
+  --color-brand-blue: #005d97;
+  --color-brand-dark: #022452;
+  --font-display: "Inter", var(--font-inter), sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a; /* tailwind slate-900 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
