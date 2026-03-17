@@ -1,0 +1,42 @@
+[
+  {
+    "id": "product-1",
+    "category": "Orthopedic",
+    "name": "Amphar JointCare+",
+    "description": "Advanced calcium supplement with vitamin D3 for enhanced bone density and joint mobility in adults.",
+    "longDescription": "Amphar JointCare+ is a breakthrough in orthopedic supplementation. Our advanced formula combines highly bioavailable calcium with essential Vitamin D3 and crucial trace minerals to fortify bone density and support comprehensive joint health. Designed for adults requiring enhanced skeletal support, JointCare+ helps maintain active lifestyles by promoting cartilage health and reducing joint discomfort.",
+    "image": "/product-1.jpeg"
+  },
+  {
+    "id": "product-2",
+    "category": "Gastroenterology",
+    "name": "DigestPlus Forte",
+    "description": "Multi-enzyme complex designed for efficient digestive support and optimal nutrient absorption.",
+    "longDescription": "DigestPlus Forte offers comprehensive digestive support through a carefully balanced blend of essential enzymes. This advanced formulation assists the body in breaking down complex carbohydrates, proteins, and fats, thereby maximizing nutrient absorption and mitigating common digestive discomforts such as bloating and gas. Ideal for individuals with sensitive digestive tracts.",
+    "image": "/product-2.jpeg"
+  },
+  {
+    "id": "product-3",
+    "category": "Dermatology",
+    "name": "DermaShield Pro",
+    "description": "Hypoallergenic protective barrier cream for intensive skin repair, hydration and protection.",
+    "longDescription": "DermaShield Pro is a clinical-grade barrier cream specifically formulated for compromised or highly sensitive skin. By forming a breathable, protective layer over the epidermis, it locks in vital moisture while shielding against environmental irritants. Enriched with ceramides and soothing botanical extracts, DermaShield Pro accelerates the natural healing process of the skin.",
+    "image": "/product-3.jpeg"
+  },
+  {
+    "id": "product-4",
+    "category": "General Medicine",
+    "name": "VitalMulti 50+",
+    "description": "Complete daily multivitamin complex tailored for senior wellness and immune system support.",
+    "longDescription": "VitalMulti 50+ is scientifically tailored to meet the unique nutritional requirements of adults over 50. This comprehensive daily supplement delivers a potent spectrum of vitamins, minerals, and antioxidants essential for maintaining cognitive function, cardiovascular health, and a robust immune system. Experience renewed vitality and foundational health support.",
+    "image": "/product-4.jpeg"
+  },
+  {
+    "id": "product-5",
+    "category": "Gynaecology",
+    "name": "FemmeBalance",
+    "description": "Specialized hormone balance support for women, enriched with botanical extracts and essential minerals.",
+    "longDescription": "FemmeBalance provides targeted nutritional support designed to naturally harmonize women's health. Utilizing a synergistic blend of standardized botanical extracts, vital vitamins, and minerals, this formulation helps manage mood fluctuations, supports reproductive health, and promotes overall emotional and physical well-being throughout various life stages.",
+    "image": "/product-5.jpeg"
+  }
+]
