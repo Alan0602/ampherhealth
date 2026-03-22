@@ -6,9 +6,9 @@ export default function ProductReference() {
   const displayedProducts = productsData.slice(0, 3);
 
   return (
-    <section className="py-24 bg-slate-50 border-y border-slate-100">
+    <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4 md:gap-6">
           <div className="max-w-xl">
             <h2 className="text-secondary text-3xl font-black tracking-tight mb-4">
               Quality &amp; Precision
@@ -21,7 +21,7 @@ export default function ProductReference() {
           </div>
           <Link
             href="/products"
-            className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
+            className="w-full md:w-auto text-center bg-white md:bg-transparent border border-slate-200 md:border-none py-3 md:py-0 rounded-xl md:rounded-none text-primary font-bold flex items-center justify-center md:justify-start gap-2 hover:gap-3 transition-all shadow-sm md:shadow-none"
           >
             View Full Product Range
             <span className="material-symbols-outlined">arrow_right_alt</span>
@@ -33,14 +33,14 @@ export default function ProductReference() {
               key={idx}
               className="bg-white border border-slate-200 overflow-hidden hover:shadow-lg transition-all group flex flex-col"
             >
-              <div className="h-64 bg-slate-100 overflow-hidden flex items-center justify-center relative p-8">
+              <div className="h-56 md:h-64 bg-slate-100 overflow-hidden flex items-center justify-center relative p-6 md:p-8">
                 <img
                   alt={product.name}
                   className="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                   src={product.image}
                 />
               </div>
-              <div className="p-8 flex-1 flex flex-col">
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
                 <span className="text-primary text-xs font-bold uppercase tracking-widest block mb-2">
                   {product.category}
                 </span>
@@ -52,7 +52,7 @@ export default function ProductReference() {
                 </p>
                 <Link 
                   href={`/products/${product.id}`}
-                  className="w-full block text-center py-3 bg-secondary text-white text-sm font-bold hover:bg-primary transition-colors"
+                  className="w-full block text-center py-3.5 md:py-3 bg-secondary text-white text-sm font-bold hover:bg-primary transition-colors rounded-lg md:rounded-none"
                 >
                   Details &amp; Specifications
                 </Link>
