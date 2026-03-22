@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white pt-20 pb-10 border-t border-white/5">
+    <footer className="bg-secondary text-white pt-16 md:pt-20 pb-8 md:pb-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 md:mb-16">
           {/* Brand Info */}
           <div>
             <div className="flex items-center mb-8">
@@ -171,25 +171,25 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-xs">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          <p className="text-slate-500 text-sm md:text-xs">
             © 2024 Amphar Health Care. All rights reserved.
           </p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
             <Link
-              className="text-slate-500 hover:text-white text-xs transition-colors"
+              className="text-slate-500 hover:text-white text-sm md:text-xs transition-colors"
               href="#"
             >
               Privacy Policy
             </Link>
             <Link
-              className="text-slate-500 hover:text-white text-xs transition-colors"
+              className="text-slate-500 hover:text-white text-sm md:text-xs transition-colors"
               href="#"
             >
               Terms of Use
             </Link>
             <Link
-              className="text-slate-500 hover:text-white text-xs transition-colors"
+              className="text-slate-500 hover:text-white text-sm md:text-xs transition-colors"
               href="#"
             >
               Cookie Policy
