@@ -23,15 +23,15 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       <Header />
       
       <main className="flex-grow bg-slate-50">
-        <div className="container mx-auto px-4 lg:px-8 py-16">
+        <div className="container mx-auto px-4 lg:px-8 py-8 md:py-16">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               {/* Product Image */}
-              <div className="lg:w-1/2 bg-[#f0f4f8] p-12 flex items-center justify-center relative min-h-[400px]">
+              <div className="lg:w-1/2 bg-[#f0f4f8] p-8 md:p-12 flex items-center justify-center relative min-h-[300px] md:min-h-[400px]">
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="max-h-[500px] w-auto object-contain drop-shadow-2xl"
+                  className="max-h-[300px] md:max-h-[500px] w-auto object-contain drop-shadow-2xl"
                 />
                 <span className="absolute top-8 left-8 bg-white/90 backdrop-blur px-3 py-1.5 rounded text-xs font-bold text-ampharDarkBlue uppercase tracking-wide shadow-sm">
                   {product.category}
@@ -39,12 +39,12 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               </div>
               
               {/* Product Info */}
-              <div className="lg:w-1/2 p-12 lg:p-16 flex flex-col justify-center">
-                <h1 className="text-4xl lg:text-5xl font-extrabold text-ampharDarkBlue mb-6">
+              <div className="lg:w-1/2 p-6 sm:p-8 lg:p-16 flex flex-col justify-center">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ampharDarkBlue mb-4 sm:mb-6">
                   {product.name}
                 </h1>
                 
-                <p className="text-xl text-gray-500 font-medium mb-8">
+                <p className="text-lg sm:text-xl text-gray-500 font-medium mb-6 sm:mb-8">
                   {product.description}
                 </p>
                 
