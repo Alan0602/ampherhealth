@@ -35,7 +35,7 @@ export default function AboutUsPage() {
 
             <h2 className="text-3xl font-bold text-ampharDarkBlue mb-6">Our Vision</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-12">
-              To be the world's most trusted healthcare partner, pioneering breakthroughs in medicine and making world-class treatments accessible to all communities, regardless of geography.
+              To be the world&apos;s most trusted healthcare partner, pioneering breakthroughs in medicine and making world-class treatments accessible to all communities, regardless of geography.
             </p>
             
             <h2 className="text-3xl font-bold text-ampharDarkBlue mb-6">Our Values</h2>
