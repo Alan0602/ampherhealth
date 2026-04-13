@@ -1,16 +1,11 @@
 "use client";
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
 
 export default function ResponsibilitySection() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
-
   return (
     <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div ref={ref} className="bg-secondary rounded-3xl md:rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+        <div className="bg-secondary rounded-3xl md:rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
           <div className="lg:w-1/2 p-8 sm:p-12 md:p-20 flex flex-col justify-center">
             <h2 className="text-white text-3xl md:text-4xl font-black mb-6 md:mb-8">
               Our Responsibility to the World
@@ -46,10 +41,9 @@ export default function ResponsibilitySection() {
           </div>
           <div className="lg:w-1/2 relative h-[300px] md:h-auto min-h-[300px] md:min-h-[400px] overflow-hidden">
             <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 pointer-events-none"></div>
-            <motion.img
-              style={{ y: imageY, willChange: 'transform' }}
+            <img
               alt="Corporate Social Responsibility"
-              className="w-full h-[130%] -top-[15%] absolute object-cover"
+              className="w-full h-full object-cover"
               data-alt="Clean modern laboratory with professional scientists"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGUR8lOmKaCNhID8jTHfyApYbsoiCCaXUUTYMFIOAlW1eISCrX4UkWjB61m89BP9PiUDr7ZcI2pOALsktFboeltiRsxjr36GKwHWQSZj914OdqjSH9t4ZVftIMD0dQkJhGOK_zHOKqnBXOGvMz_q8Nqtng5X_NCEVbV4abm7V4mWfckwD3y0XXWC_QIgAW2fpX1gu4rQso9FlwGphVnPdduLtYmY9FPQfDRuT4Rb-PoEzqqNQ8AOLmXXfQkKzdvQyCjYznXH_UNHU"
             />
@@ -59,3 +53,4 @@ export default function ResponsibilitySection() {
     </section>
   );
 }
+
