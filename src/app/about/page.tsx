@@ -11,16 +11,16 @@ export default function AboutUsPage() {
         <section className="relative bg-ampharDarkBlue/90 text-white py-24 lg:py-32 overflow-hidden">
           {/* Animated Background GIF */}
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/Whisk_imy3utmhvtz3emn00inkzgotuwzirtlkrmyl1sn.gif" 
-              alt="Background Animation" 
+            <img
+              src="/Whisk_imy3utmhvtz3emn00inkzgotuwzirtlkrmyl1sn.gif"
+              alt="Background Animation"
               className="w-full h-full object-cover opacity-20 mix-blend-luminosity"
             />
           </div>
-          <div className="container relative mx-auto px-4 lg:px-8 z-10 text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6">About Amphar</h1>
-            <p className="text-ampharLightBlue text-xl max-w-3xl mx-auto leading-relaxed font-medium">
-              We are dedicated to providing high-quality medical solutions and improving lives through scientific innovation and compassionate care.
+          <div className="container relative mx-auto px-4 lg:px-8 z-10 text-center flex flex-col items-center">
+            <img src="/logo.png" alt="Amphar Health Care logo" className="h-24 md:h-32 mb-8 object-contain" />
+            <p className=" text-xl max-w-4xl mx-auto leading-relaxed font-medium text-primary">
+              Amphar Health Care is an emerging leader in the pharmaceutical sector, dedicated to the manufacturing and marketing of premium healthcare products. Our core expertise lies in delivering specialized formulations across key therapeutic areas, including Orthopedics, Gastroenterology, and Internal Medicine. By integrating cutting-edge research with a commitment to quality and precision, we strive to make advanced healthcare accessible to all. At Amphar, we don’t just manufacture medicines; we engineer wellness.
             </p>
           </div>
         </section>
@@ -37,7 +37,7 @@ export default function AboutUsPage() {
             <p className="text-gray-600 text-lg leading-relaxed mb-12">
               To be the world&apos;s most trusted healthcare partner, pioneering breakthroughs in medicine and making world-class treatments accessible to all communities, regardless of geography.
             </p>
-            
+
             <h2 className="text-3xl font-bold text-ampharDarkBlue mb-6">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
