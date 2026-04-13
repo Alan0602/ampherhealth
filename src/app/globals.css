@@ -44,6 +44,19 @@
       opacity: 1;
     }
   }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes marqueeReverse {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marqueeReverse 32s linear infinite;
 }
 
 :root {
