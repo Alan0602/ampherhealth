@@ -37,7 +37,7 @@ export default function ProductReference() {
                 <img
                   alt={product.name}
                   className="h-full w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500"
-                  src={product.image}
+                  src={product.image2}
                 />
               </div>
               <div className="p-6 md:p-8 flex-1 flex flex-col">
@@ -50,7 +50,7 @@ export default function ProductReference() {
                 <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-2">
                   {product.description}
                 </p>
-                <Link 
+                <Link
                   href={`/products/${product.id}`}
                   className="w-full block text-center py-3.5 md:py-3 bg-secondary text-white text-sm font-bold hover:bg-primary transition-colors rounded-lg md:rounded-none"
                 >
