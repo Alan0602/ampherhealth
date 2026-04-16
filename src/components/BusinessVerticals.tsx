@@ -27,14 +27,14 @@ export default function BusinessVerticals() {
       {/* Top fade for cinematic transition */}
       <div className="absolute top-0 left-0 right-0 h-[150px] bg-gradient-to-b from-secondary to-transparent z-10 pointer-events-none"></div>
 
-      <div className="absolute inset-0 z-0 h-full top-0">
+      {/* <div className="absolute inset-0 z-0 h-full top-0">
         <img
           src="/sun.gif"
           alt="Joint Animation"
           className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
         />
         <div className="absolute inset-0 bg-white/50"></div>
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-8 md:mb-16">
         <motion.div
