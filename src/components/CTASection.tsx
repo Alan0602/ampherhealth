@@ -20,12 +20,12 @@ export default function CTASection() {
           Our Research &amp; Development team can assist in custom formulations for institutional requirements. Partner with us for cutting-edge medical solutions.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a className="bg-ampharLightBlue text-white px-8 py-4 sm:py-3 rounded-xl sm:rounded-md font-bold hover:bg-ampharDarkBlue transition-all shadow-lg text-center" href="#">
+          <a className="bg-primary text-white px-8 py-4 sm:py-3 rounded-xl sm:rounded-md font-bold hover:bg-ampharDarkBlue transition-all shadow-lg text-center" href="#">
             Enquire Now
           </a>
-          <a className="bg-white border-2 border-ampharDarkBlue text-ampharDarkBlue px-8 py-4 sm:py-3 rounded-xl sm:rounded-md font-bold hover:bg-ampharBg transition-all text-center" href="#">
+          {/* <a className="bg-white border-2 border-ampharDarkBlue text-ampharDarkBlue px-8 py-4 sm:py-3 rounded-xl sm:rounded-md font-bold hover:bg-ampharBg transition-all text-center" href="#">
             Download Catalog (PDF)
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
