@@ -14,10 +14,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.22),transparent_50%)] z-0 mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(0,93,151,0.15),transparent_60%)] z-0 mix-blend-screen pointer-events-none" />
 
-        {/* Radial and Linear blending overlays */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--color-secondary)_90%)] opacity-55" />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/60 via-secondary/20 to-secondary/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-transparent to-secondary/70" />
       </div>
 
       {/* Centered headline */}
