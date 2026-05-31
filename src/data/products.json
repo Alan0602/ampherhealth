@@ -6,7 +6,8 @@
     "description": "Advanced calcium supplement with vitamin D3 for enhanced bone density and joint mobility in adults.",
     "longDescription": "Amphar JointCare+ is a breakthrough in orthopedic supplementation. Our advanced formula combines highly bioavailable calcium with essential Vitamin D3 and crucial trace minerals to fortify bone density and support comprehensive joint health. Designed for adults requiring enhanced skeletal support, JointCare+ helps maintain active lifestyles by promoting cartilage health and reducing joint discomfort.",
     "image": "/product-1.jpeg",
-    "image2": "/APS04075.JPG.jpeg"
+    "image2": "/APS04075.JPG.jpeg",
+    "specImage": "/Rutoff.jpg"
   },
   {
     "id": "product-2",
@@ -15,7 +16,8 @@
     "description": "Multi-enzyme complex designed for efficient digestive support and optimal nutrient absorption.",
     "longDescription": "DigestPlus Forte offers comprehensive digestive support through a carefully balanced blend of essential enzymes. This advanced formulation assists the body in breaking down complex carbohydrates, proteins, and fats, thereby maximizing nutrient absorption and mitigating common digestive discomforts such as bloating and gas. Ideal for individuals with sensitive digestive tracts.",
     "image": "/product-2.jpeg",
-    "image2": "/5.jpg"
+    "image2": "/5.jpg",
+    "specImage": "/Amphrol.png"
   },
   {
     "id": "product-3",
@@ -24,7 +26,8 @@
     "description": "Hypoallergenic protective barrier cream for intensive skin repair, hydration and protection.",
     "longDescription": "DermaShield Pro is a clinical-grade barrier cream specifically formulated for compromised or highly sensitive skin. By forming a breathable, protective layer over the epidermis, it locks in vital moisture while shielding against environmental irritants. Enriched with ceramides and soothing botanical extracts, DermaShield Pro accelerates the natural healing process of the skin.",
     "image": "/product-3.jpeg",
-    "image2": "/6.jpg"
+    "image2": "/6.jpg",
+    "specImage": "/Gabmc.jpg"
   },
   {
     "id": "product-4",
@@ -33,7 +36,8 @@
     "description": "Complete daily multivitamin complex tailored for senior wellness and immune system support.",
     "longDescription": "VitalMulti 50+ is scientifically tailored to meet the unique nutritional requirements of adults over 50. This comprehensive daily supplement delivers a potent spectrum of vitamins, minerals, and antioxidants essential for maintaining cognitive function, cardiovascular health, and a robust immune system. Experience renewed vitality and foundational health support.",
     "image": "/product-4.jpeg",
-    "image2": "/2.jpg"
+    "image2": "/2.jpg",
+    "specImage": "/Efinac.jpg"
   },
   {
     "id": "product-5",
@@ -42,7 +46,8 @@
     "description": "Specialized hormone balance support for women, enriched with botanical extracts and essential minerals.",
     "longDescription": "FemmeBalance provides targeted nutritional support designed to naturally harmonize women's health. Utilizing a synergistic blend of standardized botanical extracts, vital vitamins, and minerals, this formulation helps manage mood fluctuations, supports reproductive health, and promotes overall emotional and physical well-being throughout various life stages.",
     "image": "/product-5.jpeg",
-    "image2": "/3.jpg"
+    "image2": "/3.jpg",
+    "specImage": "/esor.jpg"
   },
   {
     "id": "product-6",
@@ -51,6 +56,27 @@
     "description": "Specialized hormone balance support for women, enriched with botanical extracts and essential minerals.",
     "longDescription": "FemmeBalance provides targeted nutritional support designed to naturally harmonize women's health. Utilizing a synergistic blend of standardized botanical extracts, vital vitamins, and minerals, this formulation helps manage mood fluctuations, supports reproductive health, and promotes overall emotional and physical well-being throughout various life stages.",
     "image": "/product-6.jpeg",
-    "image2": "/4.jpg"
+    "image2": "/4.jpg",
+    "specImage": "/Thialgia.jpg"
+  },
+  {
+    "id": "product-7",
+    "category": "Gastro",
+    "name": "Efinac-R",
+    "description": "Enteric coated Rabeprazole Sodium & sustained release Aceclofenac capsules for superior gastrointestinal protection and pain relief.",
+    "longDescription": "Efinac-R combines the potent acid suppression of Rabeprazole Sodium with the sustained anti-inflammatory action of Aceclofenac in an advanced enteric-coated capsule formulation. This dual-action approach ensures effective management of gastric acid-related disorders while providing sustained pain relief, making it ideal for patients requiring concurrent NSAID therapy with gastroprotection.",
+    "image": "/product-7.jpg",
+    "image2": "/product-7.jpg",
+    "specImage": ""
+  },
+  {
+    "id": "product-8",
+    "category": "Orthopedic",
+    "name": "Caltobone-K27",
+    "description": "Calcitriol, Calcium Citrate Malate, Vitamin K27 & Methylcobalamin softgel capsules for comprehensive bone health and nerve support.",
+    "longDescription": "Caltobone-K27 is a premium softgel formulation engineered for optimal skeletal and neurological health. By combining Calcitriol (active Vitamin D3) with highly bioavailable Calcium Citrate Malate, Vitamin K27 for directed calcium metabolism, and Methylcobalamin for nerve health, this advanced supplement addresses the complete spectrum of bone maintenance — from calcium absorption to bone mineralization and peripheral nerve support.",
+    "image": "/product-8.jpg",
+    "image2": "/product-8.jpg",
+    "specImage": ""
   }
 ]
