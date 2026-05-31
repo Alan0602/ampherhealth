@@ -2,18 +2,14 @@ export default function HeroSection() {
   const text = "Trusted Medicines.";
 
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center justify-center overflow-hidden bg-secondary">
+    <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center justify-center overflow-hidden bg-black">
       {/* Background GIF */}
-      <div className="absolute inset-0 z-0 bg-secondary">
+      <div className="absolute inset-0 z-0 bg-black">
         <img
           src="/hero1.gif"
           alt="Abstract Molecular Animation"
-          className="w-full h-full object-cover mix-blend-luminosity animate-gif-fade"
+          className="w-full h-full object-cover animate-gif-fade"
         />
-        {/* Sky Blue Ambient Light Leaks */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.22),transparent_50%)] z-0 mix-blend-screen pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(0,93,151,0.15),transparent_60%)] z-0 mix-blend-screen pointer-events-none" />
-
       </div>
 
       {/* Centered headline */}
