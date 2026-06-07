@@ -7,13 +7,25 @@ import products from "@/data/products.json";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+type Product = {
+  id: string;
+  category?: string;
+  name: string;
+  description: string;
+  longDescription: string;
+  longDescriptionIndications?: string;
+  image?: string;
+  image2?: string;
+  specImage?: string;
+};
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
 
 export default function ProductPage({ params }: PageProps) {
   const resolvedParams = use(params);
-  const product = products.find((p) => p.id === resolvedParams.id);
+  const product = (products as Product[]).find((p) => p.id === resolvedParams.id);
 
   if (!product) {
     return (
@@ -26,141 +38,258 @@ export default function ProductPage({ params }: PageProps) {
     );
   }
 
-  const hasSpecImage = !!(product as any).specImage;
-
-  const renderTextContent = (isSidebar: boolean) => {
-    return (
-      <motion.div
-        initial={isSidebar ? { opacity: 0, x: 20 } : { opacity: 0, y: 50 }}
-        animate={isSidebar ? { opacity: 1, x: 0 } : undefined}
-        whileInView={!isSidebar ? { opacity: 1, y: 0 } : undefined}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className={isSidebar ? "w-full text-left lg:pl-6 animate-fade-in" : "mt-32 max-w-5xl mx-auto text-center"}
-      >
-        <div className={`inline-flex items-center px-5 py-2 bg-white/40 backdrop-blur-md border border-white/50 rounded-full shadow-sm mb-6 ${isSidebar ? "" : "mx-auto"}`}>
-          <span className="w-2 h-2 rounded-full bg-primary animate-ping mr-3"></span>
-          <span className="text-xs font-black uppercase tracking-[0.2em] text-secondary">
-            {product.category || "General Health"}
-          </span>
-        </div>
-
-        <h1 className={`${isSidebar ? "text-4xl md:text-5xl lg:text-6xl" : "text-5xl md:text-6xl lg:text-7xl"} font-black text-secondary mb-6 leading-[1.1] tracking-tighter`}>
-          {product.name}
-        </h1>
-
-        <p className={`${isSidebar ? "text-lg md:text-xl mb-10" : "text-xl md:text-2xl mb-16 max-w-3xl mx-auto"} text-slate-600 leading-relaxed font-medium`}>
-          {product.description}
-        </p>
-
-        {/* Info Card (Glassmorphism) with impulsive shadow */}
-        <div className={`relative group/card mb-10 ${isSidebar ? "w-full" : "max-w-4xl mx-auto"} text-left`}>
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-[2rem] blur-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
-          <div className="relative bg-white/50 backdrop-blur-2xl border border-white/60 p-8 md:p-10 rounded-[2rem] shadow-xl">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary transform -rotate-3 group-hover/card:rotate-0 transition-transform duration-500">
-                <span className="material-symbols-outlined font-bold">clinical_notes</span>
-              </div>
-              <h3 className="text-secondary font-black text-2xl md:text-3xl ml-4">Therapeutic Profile</h3>
-            </div>
-            <p className="text-slate-600 text-lg md:text-xl leading-[1.8] font-normal">
-              {product.longDescription}
-            </p>
-          </div>
-        </div>
-
-        <div className={`flex flex-wrap gap-6 ${isSidebar ? "justify-start" : "justify-center"}`}>
-          <button className="px-10 py-5 bg-secondary text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-105 hover:shadow-[0_20px_40px_-10px_rgba(2,36,82,0.3)] transition-all duration-300">
-            Inquire Now
-          </button>
-          <button className="px-10 py-5 bg-white/60 backdrop-blur-md border border-white/80 text-secondary rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-white transition-all duration-300 shadow-sm">
-            Download Portfolio
-          </button>
-        </div>
-        
-        {/* Brand watermark */}
-        <div className={`text-center mt-20 ${isSidebar ? "lg:text-left lg:mt-16" : ""}`}>
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-300">Amphar Health Care</p>
-        </div>
-      </motion.div>
-    );
-  };
+  const hasSpecImage = !!product.specImage;
+  const hasIndications = !!product.longDescriptionIndications;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       <Header />
 
-      <main className="flex-grow pt-24 pb-16 relative overflow-hidden">
-        {/* Animated background blobs for depth */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl -z-10 animate-pulse delay-700"></div>
+      <main className="flex-grow pt-24 pb-20 relative overflow-hidden">
+        {/* Ambient background glow */}
+        <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl -z-10 animate-pulse delay-700"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Futuristic Breadcrumbs */}
-          <nav className="flex mb-10 text-sm font-bold tracking-tight text-slate-400" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-primary transition-colors uppercase">Home</Link>
+          {/* Breadcrumb */}
+          <nav className="flex mb-10 text-xs font-bold tracking-widest text-slate-400 uppercase" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span className="mx-3 opacity-30">/</span>
-            <span className="text-secondary uppercase">{product.name}</span>
+            <span className="text-secondary">{product.name}</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left Column: Product Image with Impulsive Shadow & Glassmorphsm */}
-            <div className="lg:col-span-5">
+          {/* HERO */}
+          <section className="relative pt-6 pb-12 md:pb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Product image */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative group w-full aspect-square md:aspect-[4/5]"
+                initial={{ opacity: 0, scale: 0.95, rotate: -3 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                className="relative group order-2 md:order-1"
               >
-                {/* Impulsive shadow container - deep, spread out primary glow */}
-                <div className="absolute -inset-4 bg-primary/20 rounded-[2.5rem] blur-[60px] group-hover:blur-[80px] transition-all duration-700 opacity-80 animate-pulse"></div>
-
-                {/* Glassmorphic image wrapper */}
-                <div className="relative h-full w-full bg-white/20 backdrop-blur-3xl border border-white/40 rounded-[2.5rem] overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.1)] flex items-center justify-center p-6 md:p-12">
+                <div className="absolute -inset-6 bg-gradient-to-tr from-primary/30 to-secondary/20 rounded-full blur-3xl -z-10 scale-110"></div>
+                <div className="relative aspect-square w-full bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] rounded-sm flex items-center justify-center p-8 md:p-12 transform transition-transform duration-700 group-hover:-translate-y-1 group-hover:rotate-1">
                   <img
                     src={product.image2 || "/APS04075.JPG.jpeg"}
                     alt={product.name}
-                    className="max-w-full max-h-full object-contain filter drop-shadow-[0_20px_20px_rgba(0,0,0,0.15)] transform transition-transform duration-1000 group-hover:scale-105"
+                    className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-1000 group-hover:scale-105"
                   />
                 </div>
               </motion.div>
-            </div>
 
-            {/* Right Column: Spec Image or Text Section */}
-            <div className="lg:col-span-7">
+              {/* Product details */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="flex flex-col items-start space-y-6 order-1 md:order-2"
+              >
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-secondary text-white">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                  <span className="text-xs font-black uppercase tracking-[0.2em]">
+                    {product.category || "General Health"}
+                  </span>
+                </div>
+
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-secondary uppercase italic leading-[0.95] tracking-tighter">
+                  {product.name.split(" ").map((word, i, arr) => (
+                    <span key={i} className="block">
+                      {i === arr.length - 1 ? (
+                        <span className="text-primary">{word}</span>
+                      ) : (
+                        word
+                      )}
+                    </span>
+                  ))}
+                </h1>
+
+                <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium max-w-xl border-l-4 border-primary pl-5">
+                  {product.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
+                  <button className="flex-1 sm:flex-none px-8 py-4 bg-secondary text-white font-black uppercase tracking-widest text-xs hover:bg-primary transition-colors duration-300 shadow-[6px_6px_0_0_#005d97] hover:shadow-[6px_6px_0_0_#022452] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#022452]">
+                    Inquire Now
+                  </button>
+                  <button className="flex-1 sm:flex-none px-8 py-4 bg-white border-2 border-secondary text-secondary font-black uppercase tracking-widest text-xs hover:bg-slate-50 transition-colors duration-300 shadow-[6px_6px_0_0_#022452] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#022452]">
+                    Download Portfolio
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* BENTO GRID */}
+          <section className="py-12 md:py-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7 }}
+              className="text-center mb-12 md:mb-16"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary uppercase italic tracking-tighter">
+                Scientific <span className="text-primary">Profile</span>
+              </h2>
+              <p className="text-slate-500 text-sm md:text-base mt-3 font-medium uppercase tracking-widest">
+                Therapeutic composition and clinical applications
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+              {/* Therapeutic Profile — large card (col-span-2) */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.7 }}
+                className="md:col-span-2 relative group"
+              >
+                <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] hover:shadow-[12px_12px_0_0_#005d97] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-secondary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                      <span className="material-symbols-outlined text-3xl">clinical_notes</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-secondary uppercase italic tracking-tight">
+                      Therapeutic Profile
+                    </h3>
+                  </div>
+                  <p className="text-slate-700 text-base md:text-lg leading-[1.85] font-normal">
+                    {product.longDescription}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Spec image or category card (col-span-1) */}
               {hasSpecImage ? (
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                  className="relative group/spec w-full h-full flex items-center justify-center"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className="md:col-span-1 relative group"
                 >
-                  {/* Ambient glow */}
-                  <div className="absolute -inset-10 bg-primary/5 rounded-[4rem] blur-[80px] group-hover/spec:bg-primary/10 transition-all duration-1000 opacity-60"></div>
-                  
-                  {/* Glassmorphic container */}
-                  <div className="relative w-full bg-white/30 backdrop-blur-3xl border border-white/50 rounded-[3rem] p-3 shadow-2xl overflow-hidden">
-                    <div className="relative rounded-[2.5rem] overflow-hidden bg-white">
-                      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 z-10"></div>
-                      <div className="relative flex items-center justify-center p-4">
-                        <img
-                          src={(product as any).specImage}
-                          alt={`${product.name} specification details`}
-                          className="w-full h-auto max-h-[600px] object-contain rounded-2xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-transform duration-[2000ms] group-hover/spec:scale-[1.03]"
-                        />
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-secondary/30 to-transparent opacity-60"></div>
+                  <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] hover:shadow-[12px_12px_0_0_#005d97] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-3 h-full">
+                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 z-10"></div>
+                    <div className="relative h-full min-h-[280px] flex items-center justify-center p-4 bg-slate-50">
+                      <img
+                        src={product.specImage}
+                        alt={`${product.name} specification`}
+                        className="w-full h-auto max-h-[420px] object-contain transition-transform duration-[1500ms] group-hover:scale-105"
+                      />
                     </div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-70"></div>
                   </div>
                 </motion.div>
               ) : (
-                renderTextContent(true)
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className="md:col-span-1 relative group"
+                >
+                  <div className="relative bg-secondary text-white border-2 border-secondary shadow-[8px_8px_0_0_#005d97] hover:shadow-[12px_12px_0_0_rgba(0,93,151,0.5)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-8 h-full flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-14 h-14 bg-primary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                        <span className="material-symbols-outlined text-3xl">category</span>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight">
+                        Category
+                      </h3>
+                    </div>
+                    <p className="text-white text-2xl md:text-3xl font-black uppercase italic leading-tight tracking-tight">
+                      {product.category || "General Health"}
+                    </p>
+                    <div className="mt-auto pt-6">
+                      <div className="h-1 w-16 bg-primary"></div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Indications — full width, only if present */}
+              {hasIndications && (
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: 0.15 }}
+                  className="md:col-span-3 relative group"
+                >
+                  <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] hover:shadow-[12px_12px_0_0_#005d97] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-10">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-14 h-14 bg-primary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                        <span className="material-symbols-outlined text-3xl">medical_information</span>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-black text-secondary uppercase italic tracking-tight">
+                        Indications
+                      </h3>
+                    </div>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                      {product.longDescriptionIndications!.split(",").map((indication, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 p-3 bg-slate-50 border-l-4 border-primary"
+                        >
+                          <span className="material-symbols-outlined text-primary text-xl mt-0.5 flex-shrink-0">
+                            check_circle
+                          </span>
+                          <span className="text-slate-700 text-base md:text-lg font-medium leading-snug">
+                            {indication.trim()}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
               )}
             </div>
-          </div>
+          </section>
 
-          {/* Bottom Section: Text Content (only if specImage is present) */}
-          {hasSpecImage && renderTextContent(false)}
+          {/* Bottom CTA */}
+          <section className="py-12 md:py-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative bg-secondary text-white p-8 md:p-14 shadow-[10px_10px_0_0_#005d97] overflow-hidden"
+            >
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-black uppercase italic tracking-tighter leading-tight">
+                    Ready to partner with <span className="text-primary">Amphar</span>?
+                  </h3>
+                  <p className="text-white/70 mt-3 text-base md:text-lg leading-relaxed">
+                    Get detailed product specifications, bulk pricing, and distribution opportunities.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
+                  <Link
+                    href="/#contact"
+                    className="px-8 py-4 bg-primary text-white text-center font-black uppercase tracking-widest text-xs hover:bg-white hover:text-secondary transition-colors duration-300"
+                  >
+                    Contact Sales
+                  </Link>
+                  <Link
+                    href="/products"
+                    className="px-8 py-4 bg-transparent border-2 border-white text-white text-center font-black uppercase tracking-widest text-xs hover:bg-white hover:text-secondary transition-colors duration-300"
+                  >
+                    View All Products
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </section>
+
+          {/* Brand watermark */}
+          <div className="text-center mt-12">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-300">Amphar Health Care</p>
+          </div>
         </div>
       </main>
 
