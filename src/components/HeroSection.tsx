@@ -3,13 +3,25 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center justify-center overflow-hidden bg-black">
-      {/* Background GIF */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0 bg-black">
-        <img
-          src="/hero1.gif"
-          alt="Abstract Molecular Animation"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover animate-gif-fade"
-        />
+          poster="/hero-poster.jpg"
+        >
+          <source src="/hero1.mp4" type="video/mp4" />
+          <source src="/hero1.webm" type="video/webm" />
+          <img
+            src="/hero1.gif"
+            alt="Abstract Molecular Animation"
+            className="w-full h-full object-cover"
+          />
+        </video>
       </div>
 
       {/* Centered headline */}
