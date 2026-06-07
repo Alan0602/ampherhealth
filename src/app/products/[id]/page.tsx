@@ -38,7 +38,6 @@ export default function ProductPage({ params }: PageProps) {
     );
   }
 
-  const hasSpecImage = !!product.specImage;
   const hasIndications = !!product.longDescriptionIndications;
 
   return (
@@ -68,12 +67,44 @@ export default function ProductPage({ params }: PageProps) {
                 transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                 className="relative group order-2 md:order-1"
               >
-                <div className="absolute -inset-6 bg-gradient-to-tr from-primary/30 to-secondary/20 rounded-full blur-3xl -z-10 scale-110"></div>
-                <div className="relative aspect-square w-full bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] rounded-sm flex items-center justify-center p-8 md:p-12 transform transition-transform duration-700 group-hover:-translate-y-1 group-hover:rotate-1">
+                <div className="absolute -inset-8 bg-gradient-to-tr from-primary/40 via-cyan-300/30 to-secondary/30 rounded-full blur-3xl -z-10 scale-110 animate-pulse"></div>
+                <div className="relative aspect-square w-full overflow-hidden border-2 border-secondary shadow-[10px_10px_0_0_#A8D8F0] flex items-center justify-center p-10 md:p-14 transform transition-transform duration-700 group-hover:-translate-y-1 group-hover:rotate-1">
+                  {/* Rotating gradient layer 1 — large conic, slow */}
+                  <div
+                    className="absolute -inset-1/2 animate-gradient-rotate will-change-transform"
+                    style={{
+                      background:
+                        "conic-gradient(from 0deg, #5DADE2 0%, #87CEEB 25%, #B0E5FF 45%, #E0F6FF 55%, #5DADE2 70%, #87CEEB 85%, #5DADE2 100%)",
+                    }}
+                  />
+                  {/* Rotating gradient layer 2 — smaller, reverse, different stops */}
+                  <div
+                    className="absolute -inset-1/3 animate-gradient-rotate-reverse will-change-transform opacity-70"
+                    style={{
+                      background:
+                        "conic-gradient(from 180deg, #ADD8E6 0%, #5DADE2 20%, #87CEEB 40%, #B0E5FF 60%, #ADD8E6 80%, #5DADE2 100%)",
+                      filter: "blur(40px)",
+                    }}
+                  />
+                  {/* Soft white veil for blend */}
+                  <div className="absolute inset-0 bg-white/40 backdrop-blur-2xl"></div>
+                  {/* Edge vignette */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background:
+                        "radial-gradient(ellipse at center, transparent 55%, rgba(255,255,255,0.65) 100%)",
+                    }}
+                  />
+                  {/* Top + bottom accent bars */}
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80 z-10"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 z-10"></div>
+
+                  {/* Product image on top */}
                   <img
                     src={product.image2 || "/APS04075.JPG.jpeg"}
                     alt={product.name}
-                    className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-1000 group-hover:scale-105"
+                    className="relative z-10 max-w-full max-h-full object-contain drop-shadow-[0_25px_25px_rgba(2,36,82,0.35)] transition-transform duration-1000 group-hover:scale-105"
                   />
                 </div>
               </motion.div>
@@ -107,15 +138,6 @@ export default function ProductPage({ params }: PageProps) {
                 <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium max-w-xl border-l-4 border-primary pl-5">
                   {product.description}
                 </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
-                  <button className="flex-1 sm:flex-none px-8 py-4 bg-secondary text-white font-black uppercase tracking-widest text-xs hover:bg-primary transition-colors duration-300 shadow-[6px_6px_0_0_#005d97] hover:shadow-[6px_6px_0_0_#022452] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#022452]">
-                    Inquire Now
-                  </button>
-                  <button className="flex-1 sm:flex-none px-8 py-4 bg-white border-2 border-secondary text-secondary font-black uppercase tracking-widest text-xs hover:bg-slate-50 transition-colors duration-300 shadow-[6px_6px_0_0_#022452] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#022452]">
-                    Download Portfolio
-                  </button>
-                </div>
               </motion.div>
             </div>
           </section>
@@ -161,53 +183,31 @@ export default function ProductPage({ params }: PageProps) {
                 </div>
               </motion.div>
 
-              {/* Spec image or category card (col-span-1) */}
-              {hasSpecImage ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.7, delay: 0.1 }}
-                  className="md:col-span-1 relative group"
-                >
-                  <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] hover:shadow-[12px_12px_0_0_#005d97] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-3 h-full">
-                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 z-10"></div>
-                    <div className="relative h-full min-h-[280px] flex items-center justify-center p-4 bg-slate-50">
-                      <img
-                        src={product.specImage}
-                        alt={`${product.name} specification`}
-                        className="w-full h-auto max-h-[420px] object-contain transition-transform duration-[1500ms] group-hover:scale-105"
-                      />
+              {/* Category card (col-span-1) */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="md:col-span-1 relative group"
+              >
+                <div className="relative bg-secondary text-white border-2 border-secondary shadow-[8px_8px_0_0_#005d97] hover:shadow-[12px_12px_0_0_rgba(0,93,151,0.5)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-8 h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 bg-primary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                      <span className="material-symbols-outlined text-3xl">category</span>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-70"></div>
+                    <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight">
+                      Category
+                    </h3>
                   </div>
-                </motion.div>
-              ) : (
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.7, delay: 0.1 }}
-                  className="md:col-span-1 relative group"
-                >
-                  <div className="relative bg-secondary text-white border-2 border-secondary shadow-[8px_8px_0_0_#005d97] hover:shadow-[12px_12px_0_0_rgba(0,93,151,0.5)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 bg-primary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                        <span className="material-symbols-outlined text-3xl">category</span>
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight">
-                        Category
-                      </h3>
-                    </div>
-                    <p className="text-white text-2xl md:text-3xl font-black uppercase italic leading-tight tracking-tight">
-                      {product.category || "General Health"}
-                    </p>
-                    <div className="mt-auto pt-6">
-                      <div className="h-1 w-16 bg-primary"></div>
-                    </div>
+                  <p className="text-white text-2xl md:text-3xl font-black uppercase italic leading-tight tracking-tight">
+                    {product.category || "General Health"}
+                  </p>
+                  <div className="mt-auto pt-6">
+                    <div className="h-1 w-16 bg-primary"></div>
                   </div>
-                </motion.div>
-              )}
+                </div>
+              </motion.div>
 
               {/* Indications — full width, only if present */}
               {hasIndications && (
@@ -218,7 +218,7 @@ export default function ProductPage({ params }: PageProps) {
                   transition={{ duration: 0.7, delay: 0.15 }}
                   className="md:col-span-3 relative group"
                 >
-                  <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#022452] hover:shadow-[12px_12px_0_0_#005d97] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-10">
+                  <div className="relative bg-white border-2 border-secondary shadow-[8px_8px_0_0_#A8D8F0] hover:shadow-[12px_12px_0_0_#6BB6D6] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 p-7 md:p-10">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="w-14 h-14 bg-primary text-white flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500">
                         <span className="material-symbols-outlined text-3xl">medical_information</span>
