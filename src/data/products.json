@@ -17,14 +17,14 @@
     "longDescription": "Amphrol-60K delivers Cholecalciferol I.P. 60000 IU in a convenient oral tablet designed to rapidly correct Vitamin D3 deficiency. It boosts a healthy immune system, maintains innate immunity and helps protect against infections. Cholecalciferol plays a dual role as both a vitamin and a hormone, supporting calcium absorption in the body, and exhibits a positive effect on energy levels and appetite. It is recommended for the prevention of rickets and Vitamin D deficiency in infants, children and adolescents, and adequate Vitamin D supplementation is advised from the first few days of life.",
     "longDescriptionIndications": "Impaired Growth, Rickets, Vitamin D3 Deficiency",
     "image": "/product-2.jpeg",
-    "image2": "/Amphrol.PNG",
+    "image2": "/Amphrol.png",
     "specImage": "/Amphrol.png"
   },
   {
     "id": "product-3",
     "category": "Neuropathic Pain",
     "name": "Gab-MC",
-    "description": "Gabapentin & Methylcobalamin tablets for the amelioration of neuropathic pain and nerve repair.",
+    "description": "Gabapentin 300mg & Methylcobalamin 500mg Tablets.",
     "longDescription": "Gab-MC is a combination of Gabapentin and Methylcobalamin formulated to ameliorate neuropathic pain and support nerve health. Gabapentin is widely used in the management of neuropathic pain — it helps reduce abnormal nerve signalling associated with nerve damage and is effective in conditions characterized by chronic nerve pain, with demonstrated benefits in diabetic neuropathy, post-herpetic neuralgia and other neuropathic disorders. Methylcobalamin, the active form of Vitamin B12, supports nerve regeneration and repair, promotes recovery of damaged nerve tissues, improves nerve conduction, and helps alleviate symptoms such as numbness, tingling and neuropathic pain. It has shown clinical benefits in diabetic neuropathy, low back pain and neuralgia.",
     "longDescriptionIndications": "Diabetic Neuropathy, Peripheral Neuropathy, Drug-Induced Neuropathy, Alcoholic Neuropathy, Trigeminal Neuralgia, Herpetic Neuralgia",
     "image": "/product-3.jpeg",
@@ -38,7 +38,7 @@
     "description": "Aceclofenac & Paracetamol tablets I.P. for multi-inhibitory action with excellent control over pain & inflammation.",
     "longDescription": "Efinac-P combines Aceclofenac and Paracetamol in a clinically proven synergistic combination that delivers multi-inhibitory action with excellent control over pain and inflammation. The synergism of Aceclofenac and Paracetamol ensures minimal side effects as against other anti-inflammatory combinations, offering the superior COX-2 specificity of Aceclofenac for peripheral action together with the central pain control of Paracetamol. Efinac-P is indicated for the effective management of pain and inflammation associated with musculoskeletal disorders, post-operative recovery and day-to-day inflammatory conditions.",
     "image": "/product-4.jpeg",
-    "image2": "/Efinac-P.PNG",
+    "image2": "/Efinac-P.png",
     "specImage": "/Efinac.jpg"
   },
   {
