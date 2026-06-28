@@ -5,9 +5,7 @@
     "name": "Rutoff",
     "description": "Trypsin 96mg, Bromelain 180mg & Rutoside 200mg tablets for powerful anti-inflammatory and anti-oedema action.",
     "longDescription": "Rutoff is a synergistic enzymatic and vascular-protective formulation combining Trypsin (96mg), Bromelain (180mg) and Rutoside (200mg) to deliver comprehensive control of inflammation, oedema and haematoma. Trypsin reduces oedema, haematoma and inflammation, restores microcirculation, and enhances phagocytosis. Bromelain is highly effective for the treatment of inflammation caused by injuries and surgery, and is better tolerated than Diclofenac in relieving osteoarthritis. Rutoside attenuates various inflammatory functions of macrophages, inhibits platelet aggregation and decreases capillary permeability, making the blood thinner and improving circulation. Together, Rutoff accelerates recovery from trauma, post-surgical inflammation and musculoskeletal injuries.",
-    "image": "/product-1.jpeg",
-    "image2": "/Rutoff.jpeg",
-    "specImage": "/Rutoff.jpeg"
+    "image2": "/Rutoff.jpeg"
   },
   {
     "id": "product-2",
@@ -16,9 +14,7 @@
     "description": "Cholecalciferol I.P. 60000 IU tablets for Vitamin D3 deficiency, bone health and immunity.",
     "longDescription": "Amphrol-60K delivers Cholecalciferol I.P. 60000 IU in a convenient oral tablet designed to rapidly correct Vitamin D3 deficiency. It boosts a healthy immune system, maintains innate immunity and helps protect against infections. Cholecalciferol plays a dual role as both a vitamin and a hormone, supporting calcium absorption in the body, and exhibits a positive effect on energy levels and appetite. It is recommended for the prevention of rickets and Vitamin D deficiency in infants, children and adolescents, and adequate Vitamin D supplementation is advised from the first few days of life.",
     "longDescriptionIndications": "Impaired Growth, Rickets, Vitamin D3 Deficiency",
-    "image": "/product-2.jpeg",
-    "image2": "/Amphrol.png",
-    "specImage": "/Amphrol.png"
+    "image2": "/Amphrol.png"
   },
   {
     "id": "product-3",
@@ -27,9 +23,7 @@
     "description": "Gabapentin 300mg & Methylcobalamin 500mg Tablets.",
     "longDescription": "Gab-MC is a combination of Gabapentin and Methylcobalamin formulated to ameliorate neuropathic pain and support nerve health. Gabapentin is widely used in the management of neuropathic pain — it helps reduce abnormal nerve signalling associated with nerve damage and is effective in conditions characterized by chronic nerve pain, with demonstrated benefits in diabetic neuropathy, post-herpetic neuralgia and other neuropathic disorders. Methylcobalamin, the active form of Vitamin B12, supports nerve regeneration and repair, promotes recovery of damaged nerve tissues, improves nerve conduction, and helps alleviate symptoms such as numbness, tingling and neuropathic pain. It has shown clinical benefits in diabetic neuropathy, low back pain and neuralgia.",
     "longDescriptionIndications": "Diabetic Neuropathy, Peripheral Neuropathy, Drug-Induced Neuropathy, Alcoholic Neuropathy, Trigeminal Neuralgia, Herpetic Neuralgia",
-    "image": "/product-3.jpeg",
-    "image2": "/Gab-mac.png",
-    "specImage": "/Gab-mac.png"
+    "image2": "/Gab-mac.png"
   },
   {
     "id": "product-4",
@@ -37,9 +31,7 @@
     "name": "Efinac-P",
     "description": "Aceclofenac & Paracetamol tablets I.P. for multi-inhibitory action with excellent control over pain & inflammation.",
     "longDescription": "Efinac-P combines Aceclofenac and Paracetamol in a clinically proven synergistic combination that delivers multi-inhibitory action with excellent control over pain and inflammation. The synergism of Aceclofenac and Paracetamol ensures minimal side effects as against other anti-inflammatory combinations, offering the superior COX-2 specificity of Aceclofenac for peripheral action together with the central pain control of Paracetamol. Efinac-P is indicated for the effective management of pain and inflammation associated with musculoskeletal disorders, post-operative recovery and day-to-day inflammatory conditions.",
-    "image": "/product-4.jpeg",
-    "image2": "/Efinac-P.png",
-    "specImage": "/Efinac.jpeg"
+    "image2": "/Efinac-P.png"
   },
   {
     "id": "product-5",
@@ -48,9 +40,7 @@
     "description": "Esomeprazole gastro-resistant tablets I.P. 40mg for superior acid suppression and healing of GI ulcers.",
     "longDescription": "Esor-40 contains Esomeprazole 40mg gastro-resistant tablets I.P., a potent proton pump inhibitor that heals 92%-94% of patients with erosive esophagitis. Esor-40 suppresses gastric acidity more effectively and in more individuals than pantoprazole 40mg daily and rabeprazole 20mg daily, ensuring superior healing rates and improved symptom relief with fewer therapy-resistant patients. It is significantly more effective at controlling gastric acidity above pH 4 for more than 16 hours.",
     "longDescriptionIndications": "Duodenal Ulcer, Drug Induced Ulcer, Reflux Esophagitis, Zollinger Ellison Syndrome",
-    "image": "/product-5.jpeg",
-    "image2": "/Esor-40.PNG",
-    "specImage": "/Esor-40.jpeg"
+    "image2": "/Esor-40.PNG"
   },
   {
     "id": "product-6",
@@ -58,9 +48,7 @@
     "name": "Sarcozpaz-40",
     "description": "Thiocolchicoside capsules I.P. 4mg — a centrally acting muscle relaxant for the reduction of spasticity.",
     "longDescription": "Sarcozpaz-40 contains Thiocolchicoside 4mg capsules I.P., a GABA-A antagonist and centrally acting muscle relaxant. It binds to GABA-A and strychnine-sensitive glycine receptors, which results in reduction of spasticity. It also exerts a myorelaxant effect at the supraspinal level via complex regulatory mechanisms, providing effective relief from muscle spasm, stiffness and associated pain in musculoskeletal and neurological conditions.",
-    "image": "/product-6.jpeg",
-    "image2": "/Sacrospaz-4.PNG",
-    "specImage": ""
+    "image2": "/Sacrospaz-4.PNG"
   },
   {
     "id": "product-7",
@@ -68,9 +56,7 @@
     "name": "Efinac-R",
     "description": "Enteric coated Rabeprazole Sodium & sustained release Aceclofenac capsules for superior gastrointestinal protection and pain relief.",
     "longDescription": "Efinac-R combines the potent acid suppression of Rabeprazole Sodium with the sustained anti-inflammatory action of Aceclofenac in an advanced enteric-coated capsule formulation. This dual-action approach ensures effective management of gastric acid-related disorders while providing sustained pain relief, making it ideal for patients requiring concurrent NSAID therapy with gastroprotection.",
-    "image": "/product-7.jpg",
-    "image2": "/product-7.jpg",
-    "specImage": ""
+    "image2": "/product-7.jpg"
   },
   {
     "id": "product-8",
@@ -78,8 +64,6 @@
     "name": "Caltobone-K27",
     "description": "Calcitriol, Calcium Citrate Malate, Vitamin K27 & Methylcobalamin softgel capsules for comprehensive bone health and nerve support.",
     "longDescription": "Caltobone-K27 is a premium softgel formulation engineered for optimal skeletal and neurological health. By combining Calcitriol (active Vitamin D3) with highly bioavailable Calcium Citrate Malate, Vitamin K27 for directed calcium metabolism, and Methylcobalamin for nerve health, this advanced supplement addresses the complete spectrum of bone maintenance — from calcium absorption to bone mineralization and peripheral nerve support.",
-    "image": "/product-8.jpg",
-    "image2": "/product-8.jpg",
-    "specImage": ""
+    "image2": "/product-8.jpg"
   }
 ]
