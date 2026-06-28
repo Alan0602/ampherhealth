@@ -4,17 +4,17 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-white pt-16 md:pt-20 pb-8 md:pb-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-16 mb-12 md:mb-16">
           {/* Brand Info */}
-          <div>
-            <div className="flex items-center mb-8">
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
               <img
                 alt="Amphar Logo"
                 className="h-16 w-auto object-contain"
                 src="/logo.png"
               />
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-8">
+            <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-md">
               Leading the way in pharmaceutical innovation and healthcare
               accessibility since 1995. Dedicated to human wellness worldwide.
             </p>
@@ -52,9 +52,9 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
+                  href="/about"
                 >
-                  About Company
+                  About Us
                 </Link>
               </li>
               <li>
@@ -63,78 +63,6 @@ export default function Footer() {
                   href="/products"
                 >
                   Our Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Media Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Investor Relations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Career Opportunities
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/* Business Verticals */}
-          <div>
-            <h4 className="text-lg font-bold mb-8 relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-1 after:bg-primary">
-              Medical Specialties
-            </h4>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Orthopedic Care
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Gastroenterology
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  Dermatology Range
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  ENT Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                  href="#"
-                >
-                  General Medicine
                 </Link>
               </li>
             </ul>
