@@ -78,22 +78,22 @@ export default function Footer() {
                   location_on
                 </span>
                 <p className="text-slate-400 text-sm">
-                  124 Healthcare Avenue, Life Sciences Park, <br />
-                  Global City, 560001
+                  St.Joseph Arcade, Ground Floor, Door No: 14/9A, Near VKM Road <br />
+                  Cochin 682307
                 </p>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-primary">
                   call
                 </span>
-                <p className="text-slate-400 text-sm">+1 (800) AMPHAR-CARE</p>
+                <p className="text-slate-400 text-sm">9744497003</p>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-primary">
                   mail
                 </span>
                 <p className="text-slate-400 text-sm">
-                  contact@ampharhealth.com
+                  ampharhealthcare@gmail.com
                 </p>
               </div>
             </div>
