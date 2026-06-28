@@ -85,9 +85,6 @@ export default function Header() {
                   type="text"
                 />
               </div> */}
-              <button className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-opacity-90 transition-all shadow-md shadow-primary/20" onClick={() => window.location.href = "/contact"}>
-                Contact Us
-              </button>
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -136,8 +133,8 @@ export default function Header() {
             </Link> */}
           </nav>
 
-          <div className="border-t border-slate-100 pt-8 flex flex-col gap-4">
-            {/* <div className="flex items-center bg-slate-100 rounded-xl px-4 py-3 border border-slate-200">
+          {/* <div className="border-t border-slate-100 pt-8 flex flex-col gap-4">
+            <div className="flex items-center bg-slate-100 rounded-xl px-4 py-3 border border-slate-200">
               <span className="material-symbols-outlined text-slate-400 text-xl mr-2">
                 search
               </span>
@@ -146,11 +143,8 @@ export default function Header() {
                 placeholder="Search products..."
                 type="text"
               />
-            </div> */}
-            <button className="w-full bg-primary text-white px-6 py-4 rounded-xl text-base font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20">
-              Contact Us
-            </button>
-          </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </>
