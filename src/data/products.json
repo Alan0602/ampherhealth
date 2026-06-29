@@ -29,7 +29,7 @@
     "id": "product-4",
     "category": "Pain Management",
     "name": "Efinac-P",
-    "description": "Aceclofenac & Paracetamol tablets I.P. for multi-inhibitory action with excellent control over pain & inflammation.",
+    "description": "Aceclofenac 100mg & Paracetamol 365mg Tablets I.P. ",
     "longDescription": "Efinac-P combines Aceclofenac and Paracetamol in a clinically proven synergistic combination that delivers multi-inhibitory action with excellent control over pain and inflammation. The synergism of Aceclofenac and Paracetamol ensures minimal side effects as against other anti-inflammatory combinations, offering the superior COX-2 specificity of Aceclofenac for peripheral action together with the central pain control of Paracetamol. Efinac-P is indicated for the effective management of pain and inflammation associated with musculoskeletal disorders, post-operative recovery and day-to-day inflammatory conditions.",
     "image2": "/Efinac-P.png"
   },
@@ -54,7 +54,7 @@
     "id": "product-7",
     "category": "Orthopedic",
     "name": "Efinac-R",
-    "description": "Enteric coated Rabeprazole Sodium & sustained release Aceclofenac capsules for superior gastrointestinal protection and pain relief.",
+    "description": "Enteric Coated Rabeprazole Sodium 20mg & Sustained Release Aceclofenac 200mg Capsules.",
     "longDescription": "Efinac-R combines the potent acid suppression of Rabeprazole Sodium with the sustained anti-inflammatory action of Aceclofenac in an advanced enteric-coated capsule formulation. This dual-action approach ensures effective management of gastric acid-related disorders while providing sustained pain relief, making it ideal for patients requiring concurrent NSAID therapy with gastroprotection.",
     "image2": "/Efinac-R.png"
   },
@@ -65,5 +65,14 @@
     "description": "Calcitriol, Calcium Citrate Malate, Vitamin K27 & Methylcobalamin softgel capsules for comprehensive bone health and nerve support.",
     "longDescription": "Caltobone-K27 is a premium softgel formulation engineered for optimal skeletal and neurological health. By combining Calcitriol (active Vitamin D3) with highly bioavailable Calcium Citrate Malate, Vitamin K27 for directed calcium metabolism, and Methylcobalamin for nerve health, this advanced supplement addresses the complete spectrum of bone maintenance — from calcium absorption to bone mineralization and peripheral nerve support.",
     "image2": "/Caltobone.png"
+  },
+  {
+    "id": "product-9",
+    "category": "Pain Management",
+    "name": "SARCOSPAZ D Gel",
+    "description": "Thiocolchicoside, Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel",
+    "longDescription": "Sarcospaz-D Gel is a topical pain relief medication used to relieve muscle and joint pain, reduce inflammation, and ease swelling caused by sprains, strains, sports injuries, back pain, neck pain, and arthritis. It is applied directly to the affected area, where it helps reduce pain and improve mobility. The gel is intended for external use only and should not be applied to broken or irritated skin.",
+    "longDescriptionIndications": "Anti-inflammatory, Anti-spasmodic, Analgesic",
+    "image2": "/Sarcozpas.PNG"
   }
 ]
