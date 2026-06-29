@@ -86,7 +86,7 @@ export default function Footer() {
                 <span className="material-symbols-outlined text-primary">
                   call
                 </span>
-                <p className="text-slate-400 text-sm">9744497003</p>
+                <p className="text-slate-400 text-sm">9995034982</p>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-primary">
