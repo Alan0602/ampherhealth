@@ -39,6 +39,7 @@ export default function ProductPage({ params }: PageProps) {
   }
 
   const hasIndications = !!product.longDescriptionIndications;
+  const isCilofol = product.name === "CILOFOL";
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
@@ -123,7 +124,10 @@ export default function ProductPage({ params }: PageProps) {
                   </span>
                 </div>
 
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-secondary uppercase italic leading-[0.95] tracking-tighter">
+                <h1
+                  className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-secondary italic leading-[0.95] tracking-tighter ${isCilofol ? "capitalize" : "uppercase"}`}
+                  style={isCilofol ? { fontFamily: "ShandonSlab-BoldItalic, serif" } : undefined}
+                >
                   {product.name.split(" ").map((word, i, arr) => (
                     <span key={i} className="block">
                       {i === arr.length - 1 ? (

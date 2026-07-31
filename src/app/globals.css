@@ -129,6 +129,14 @@ body {
   color: var(--foreground);
 }
 
+@font-face {
+  font-family: "ShandonSlab-BoldItalic";
+  src: url("/ShandonSlab-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Custom utility styles */
 .scroll-lock {
   overflow: hidden;
